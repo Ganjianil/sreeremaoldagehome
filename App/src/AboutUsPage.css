@@ -1,0 +1,126 @@
+.about-us-section {
+    padding: 60px 20px;
+    background-color: #fdfdfd; /* A very light, almost white background */
+    color: #333; /* Dark text for readability */
+    line-height: 1.7;
+    font-family: 'Georgia', serif; /* A more traditional, readable serif font */
+  }
+  
+  .about-us-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .about-us-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0; /* Subtle separator */
+  }
+  
+  .about-us-header h1 {
+    font-size: 2.8em;
+    color: #2c3e50; /* A deep, calm blue */
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .about-us-subheading {
+    font-size: 1.2em;
+    color: #7f8c8d; /* A soft grey */
+    font-style: italic;
+  }
+  
+  .about-us-content {
+    /* Styles for the main content area if needed */
+  }
+  
+  .about-us-block {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #ffffff; /* White background for content blocks */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Soft shadow for depth */
+    border-left: 5px solid #3498db; /* Accent color border */
+  }
+  
+  .about-us-block:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about-us-block-title {
+    font-size: 1.8em;
+    color: #3498db; /* Accent color for block titles */
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ecf0f1; /* Light separator under title */
+    font-weight: 500;
+  }
+  
+  .about-us-block p {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .about-us-block p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Optional Image Styling (if you add images) */
+  .about-us-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .founder-image {
+    /* Specific styles if needed */
+    /* float: left; */
+    /* margin-right: 20px; */
+    /* max-width: 250px; */ /* Example */
+  }
+  
+  .philosophy-image {
+    /* Specific styles if needed */
+    /* display: block; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* max-width: 400px; */ /* Example */
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-us-section {
+      padding: 40px 15px;
+    }
+    .about-us-header h1 {
+      font-size: 2.4em;
+    }
+    .about-us-subheading {
+      font-size: 1.1em;
+    }
+    .about-us-block-title {
+      font-size: 1.6em;
+    }
+    .about-us-block p {
+      font-size: 1em;
+    }
+    .about-us-block {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-us-header h1 {
+      font-size: 2em;
+    }
+    .about-us-block-title {
+      font-size: 1.4em;
+    }
+  }
+  

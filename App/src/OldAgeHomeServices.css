@@ -1,0 +1,190 @@
+.oah-services-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light grey background for the section */
+    text-align: center;
+  }
+  
+  .oah-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .oah-services-main-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .oah-services-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  .oah-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for desktop */
+    gap: 30px;
+  }
+  
+  .oah-service-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .oah-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  .oah-service-card-image-container {
+    width: 100%;
+    height: 220px; /* Default height for desktop */
+    overflow: hidden;
+  }
+  
+  .oah-service-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .oah-service-card:hover .oah-service-card-image {
+    transform: scale(1.05);
+  }
+  
+  .oah-service-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .oah-service-card-title {
+    font-size: 1.4em; /* Default for desktop */
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .oah-service-card-description {
+    font-size: 0.95em; /* Default for desktop */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Adjusted margin to give space for button */
+    flex-grow: 1; /* Pushes the button to the bottom */
+  }
+  
+  /* Styles for the "Book Now" Button */
+  .oah-service-card-button {
+    display: inline-block; 
+    background-color: #007bff; /* Primary blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em; /* Base font size for the button */
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: auto; /* Pushes button to the bottom of the flex container */
+    align-self: stretch; /* Makes button full width of its content area */
+  }
+  
+  .oah-service-card-button:hover,
+  .oah-service-card-button:focus {
+    background-color: #0056b3; /* Darker shade on hover/focus */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+    outline: none; 
+  }
+  
+  .oah-service-card-button:active {
+    transform: translateY(0px); /* Button presses down */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) { /* Larger tablets / smaller desktops */
+    .oah-services-main-title {
+      font-size: 2.2em;
+    }
+    .oah-services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .oah-service-card-title {
+      font-size: 1.3em;
+    }
+    /* Button styles will inherit or can be adjusted here if needed for this breakpoint */
+  }
+  
+  @media (max-width: 768px) { /* Tablets and larger phones - TWO COLUMN LAYOUT for cards */
+    .oah-services-section {
+      padding: 40px 15px;
+    }
+    .oah-services-main-title {
+      font-size: 2em;
+    }
+    .oah-services-subtitle {
+      font-size: 1em;
+      margin-bottom: 30px;
+    }
+    .oah-services-grid {
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px; 
+    }
+    .oah-service-card-image-container {
+      height: 160px; 
+    }
+    .oah-service-card-content {
+      padding: 15px; 
+    }
+    .oah-service-card-title {
+      font-size: 1.1em; 
+      margin-bottom: 8px;
+    }
+    .oah-service-card-description {
+      font-size: 0.85em; 
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .oah-service-card-button { /* Button adjustments for this breakpoint */
+      font-size: 0.85em;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Very small mobile screens - ONE COLUMN LAYOUT for cards */
+    .oah-services-grid {
+      grid-template-columns: 1fr; 
+      gap: 25px; 
+    }
+    .oah-service-card-image-container {
+      height: 180px; 
+    }
+    .oah-service-card-title {
+      font-size: 1.2em; 
+    }
+    .oah-service-card-description {
+      font-size: 0.9em; 
+    }
+    .oah-service-card-button { /* Button adjustments for this breakpoint */
+      font-size: 0.9em; 
+      /* Padding can remain as per the 768px breakpoint or be adjusted */
+    }
+  }
+  

@@ -1,0 +1,145 @@
+.oah-hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4a4a4a; /* Dark grey background */
+    color: #f0f0f0; /* Light text color */
+    padding: 60px 40px;
+    min-height: 70vh;
+    gap: 40px;
+  }
+  
+  .oah-hero-content {
+    flex-basis: 55%;
+    padding-right: 30px;
+  }
+  
+  .oah-hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  
+  .oah-hero-content p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #dcdcdc;
+  }
+  
+  .oah-hero-cta-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 12px 28px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .oah-hero-cta-button:hover {
+    background-color: #ffffff;
+    color: #4a4a4a;
+  }
+  
+  .oah-hero-image-container {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .oah-hero-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    max-height: 500px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .oah-hero-content h1 {
+      font-size: 2.4em;
+    }
+    .oah-hero-content p {
+      font-size: 1em;
+    }
+  }
+  
+  /* === MOBILE STYLES TO MIMIC THE REFERENCE === */
+  @media (max-width: 768px) {
+    .oah-hero-section {
+      flex-direction: column-reverse; /* Stack image on top, then text content */
+      padding: 40px 20px;
+      min-height: auto;
+      gap: 0; /* Reset gap, manage spacing with margins */
+    }
+  
+    .oah-hero-image-container {
+      flex-basis: 100%; /* Image takes full width */
+      width: 100%; /* Ensure it can go full width */
+      max-width: 90%; /* Or a bit less than full width for some padding effect */
+      margin: 0 auto 30px auto; /* Center image and add space below it */
+    }
+  
+    .oah-hero-image-container img {
+      max-height: 350px; /* Adjust image height for mobile */
+      width: 100%; /* Ensure image within container is responsive */
+    }
+  
+    .oah-hero-content {
+      flex-basis: 100%; /* Content takes full width */
+      padding-right: 0;
+      text-align: center; /* Center text content */
+      /* margin-bottom is removed as image is now on top */
+    }
+  
+    .oah-hero-content h1 {
+      font-size: 2em; /* Adjust headline size for mobile */
+      margin-bottom: 15px; /* Adjust spacing */
+    }
+  
+    .oah-hero-content p {
+      font-size: 1em; /* Adjust paragraph size for mobile */
+      margin-bottom: 25px; /* Adjust spacing */
+    }
+  
+    .oah-hero-cta-button {
+      padding: 12px 25px; /* Slightly adjust button padding if needed */
+      font-size: 0.95em; /* Slightly adjust button font size */
+      /* The button style itself (outline) already matches the reference */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .oah-hero-section {
+      padding: 30px 15px;
+    }
+  
+    .oah-hero-image-container {
+      max-width: 100%; /* Allow full width on very small screens */
+      margin-bottom: 25px;
+    }
+  
+    .oah-hero-image-container img {
+      max-height: 300px;
+    }
+  
+    .oah-hero-content h1 {
+      font-size: 1.7em;
+    }
+    .oah-hero-content p {
+      font-size: 0.9em;
+    }
+    .oah-hero-cta-button {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  }
+  

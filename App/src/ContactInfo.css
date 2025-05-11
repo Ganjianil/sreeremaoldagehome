@@ -1,0 +1,117 @@
+.contact-info-section {
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background for a clean look */
+    text-align: center;
+    border-top: 1px solid #e0e0e0; /* Optional separator from previous section */
+  }
+  
+  .contact-info-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .contact-info-title {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    gap: 30px; /* Space between address and phone */
+    margin-bottom: 30px;
+    text-align: left; /* Align text within each item to the left */
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start; /* Align icon with the top of the text block */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for each item */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .contact-icon {
+    font-size: 1.8em; /* Size of the emoji/icon */
+    margin-right: 20px;
+    color: #007bff; /* Icon color */
+    line-height: 1.2; /* Adjust line height for better vertical alignment with text */
+  }
+  
+  .contact-text .contact-label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+  }
+  
+  .address-line {
+    display: block; /* Each address line on a new line */
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .phone-number-link {
+    font-size: 1.2em;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .phone-number-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  .contact-invitation {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.7;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 600px) { /* Side-by-side for address and phone on wider screens */
+    .contact-details {
+      flex-direction: row; /* Address and phone side-by-side */
+      justify-content: space-around; /* Distribute space */
+    }
+    .contact-item {
+      flex-basis: 48%; /* Each item takes roughly half the width */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-info-title {
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-info-section {
+      padding: 30px 15px;
+    }
+    .contact-info-title {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    .contact-item {
+      padding: 15px;
+    }
+    .contact-icon {
+      font-size: 1.6em;
+      margin-right: 15px;
+    }
+    .contact-text .contact-label {
+      font-size: 1em;
+    }
+    .phone-number-link {
+      font-size: 1.1em;
+    }
+    .contact-invitation {
+      font-size: 1em;
+    }
+  }
+  

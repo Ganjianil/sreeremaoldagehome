@@ -1,0 +1,152 @@
+/* --- DESKTOP STYLES (largely unchanged, but ensure consistency) --- */
+.oah-hero-section {
+    display: flex;
+    align-items: center;
+    /* Default background for desktop, can be overridden by mobile if needed */
+    background-color: #333333; /* Dark grey, similar to the content block in the image */
+    color: #f0f0f0; /* Light text color for contrast */
+    padding: 60px 40px; /* Desktop padding */
+    min-height: calc(70vh - 70px); /* Adjust 70px if header height is different */
+    gap: 40px;
+  }
+  
+  .oah-hero-content {
+    flex-basis: 55%;
+    padding-right: 30px;
+    /* Text color will be inherited or set specifically */
+  }
+  
+  .oah-hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #ffffff; /* White headline */
+  }
+  
+  .oah-hero-content p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #d1d1d1; /* Lighter grey for paragraph */
+  }
+  
+  .oah-hero-cta-button { /* This is an <a> tag styled as a button */
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 12px 28px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .oah-hero-cta-button:hover {
+    background-color: #ffffff;
+    color: #333333; /* Dark text on hover */
+    transform: translateY(-2px);
+  }
+  
+  .oah-hero-image-container {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .oah-hero-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    max-height: 500px;
+  }
+  
+  /* --- RESPONSIVE STYLES --- */
+  @media (max-width: 992px) {
+    .oah-hero-content h1 {
+      font-size: 2.4em;
+    }
+    .oah-hero-content p {
+      font-size: 1em;
+    }
+  }
+  
+  /* === MOBILE STYLES TO MATCH THE REFERENCE IMAGE === */
+  @media (max-width: 768px) {
+    .oah-hero-section {
+      flex-direction: column; /* Image will be first due to HTML order, then content block */
+      padding: 0; /* Remove padding from the section itself */
+      min-height: auto;
+      gap: 0;
+      background-color: #ffffff; /* Default white background for the overall page area on mobile */
+                                 /* The dark grey will be applied to the content block */
+    }
+  
+    .oah-hero-image-container {
+      flex-basis: auto; /* Let image take its natural height */
+      width: 100%; /* Image container full width */
+      max-width: 100%; /* No artificial max-width for the container */
+      margin: 0 0 0 0; /* No margin around image container */
+      border-radius: 0; /* No rounded corners for the image container itself */
+    }
+  
+    .oah-hero-image-container img {
+      width: 100%;
+      max-height: 300px; /* Or adjust as needed for mobile image height */
+      border-radius: 0; /* Image itself has no rounded corners if it's edge-to-edge */
+      box-shadow: none; /* Remove shadow from image on mobile if it's full width */
+      object-fit: cover; /* Or 'contain' if you want to see the whole image */
+    }
+  
+    .oah-hero-content { /* This is the dark grey block */
+      flex-basis: auto;
+      width: 100%;
+      background-color: #383838; /* Dark grey background for content block */
+      color: #f0f0f0; /* Default light text for this block */
+      padding: 30px 20px; /* Padding inside the content block */
+      text-align: center;
+      box-sizing: border-box;
+    }
+  
+    .oah-hero-content h1 {
+      font-size: 1.8em; /* Prominent white headline */
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+  
+    .oah-hero-content p {
+      font-size: 0.95em;
+      color: #c7c7c7; /* Lighter grey for paragraph text */
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+  
+    .oah-hero-cta-button {
+      padding: 10px 22px;
+      font-size: 0.9em;
+      /* Border and text color are already white from default styles */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .oah-hero-image-container img {
+      max-height: 250px;
+    }
+    .oah-hero-content {
+      padding: 25px 15px;
+    }
+    .oah-hero-content h1 {
+      font-size: 1.6em;
+    }
+    .oah-hero-content p {
+      font-size: 0.9em;
+    }
+  }
+  
